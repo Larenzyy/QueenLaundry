@@ -1,0 +1,643 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #e6f2ff;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #2563eb;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+}
+
+.sidebar img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Pastikan anak-anaknya (nav-item) rata kiri */
+  margin-top: 0px; /* Opsional: beri jarak dari logo */
+  margin-left: 60px;
+}
+
+.nav-item {
+  display: block; 
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 240px;
+  background-color: #e0f0ff;
+  min-height: 100vh;
+  padding: 5px 30px 50px 50px; /* Ubah padding supaya ke atas */
+  font-family: "Inter", sans-serif;
+}
+
+.main-content h2 {
+  font-size: 24px; /* Perbesar tulisan Dashboard Kasir */
+  margin-left: 20px;
+  margin-bottom: 10px; /* Spasi ke form */
+  margin-top: 7px; /* Kalau mau agak naik */
+}
+
+/* Form Transaksi */
+.form-transaksi {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 1000px;
+}
+
+.form-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+.checkbox-group label {
+  display: flex;
+  align-items: center; /* Pusatkan vertikal */
+  gap: 5px;
+  white-space: nowrap; /* Hindari text wrapping */
+  padding-left: 15px; /* Hapus padding kanan yang tidak perlu */
+}
+
+.service-qty {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.service-qty:disabled {
+  background-color: #f5f5f5;
+  opacity: 0.7;
+}
+
+.form-left,
+.form-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.laundry-type-container {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 7px;
+}
+
+.laundry-type-container select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  max-width: 800px;
+  min-width: 350px;
+}
+
+/* Button OK */
+.btn-ok {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  width: 40px;
+  height: 25x;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.btn-ok:hover {
+  background-color: #0056b3;
+}
+
+/* Button Tambah dan Kembali */
+.form-buttons {
+  margin-top: 0px;
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+}
+
+.btn-tambah,
+.btn-kembali {
+  width: 100px;
+  height: 42px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn-tambah {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-kembali {
+  background-color: #ffc107;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-tambah:hover {
+  background-color: #218838;
+}
+
+.btn-kembali:hover {
+  background-color: #e0a800;
+}
+
+.datetime-group label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.datetime-inputs {
+  display: flex;
+  gap: 30px;
+}
+
+.datetime-inputs input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.datetime-inputs input[type="date"] {
+  width: 150px;
+  height: 10px;
+}
+
+.datetime-inputs input[type="time"] {
+  width: 120px;
+  height: 10px;
+  margin-top: 5px;
+}
+
+.btn-red {
+  width: 130px;
+  height: 42px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 30px;
+}
+
+.btn-red {
+  background-color: #ff0707;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-red:hover {
+  background-color: #ff0b0b;
+}
+
+.btn-green {
+  width: 130px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 30px;
+}
+
+.btn-green {
+  background-color: #218838;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-green:hover {
+  background-color: #218838;
+}
+
+.transaksi-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+     overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+  table-layout: fixed;
+  }
+  
+  .transaksi-table th,
+  .transaksi-table td {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+     overflow-wrap: break-word; /* agar teks tidak merusak layout */
+    word-wrap: break-word;
+  word-break: break-word;
+  white-space: nowrap; /* atur sesuai kebutuhan, bisa dihilangkan */
+  }
+  
+  .transaksi-table th {
+    background-color: #f5f5f5;
+  }
+
+  /*untuk transaksi.php*/
+
+  .add-item-btn {
+    background-color: #3366cc;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 6px 12px;
+    display: inline-block;
+    height: 30px;
+    line-height: 24px;
+  }
+  
+  .search-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .search-box input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 200px;
+    outline: none;
+  }
+  
+  .search-btn {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  .item-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-table th,
+  .item-table td {
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .item-table th {
+    background-color: #f5f5f5;
+  }
+  
+  .btn-edit {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+  }
+
+   .btn-cetak {
+    background-color: #515961;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-container {
+    background-color: #f9f9f9;
+    padding: 30px 40px;
+    border-radius: 8px;
+    max-width: 700px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .btn-tambah {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-tambah:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-kembali {
+    background-color: #ffc107;
+    color: #000;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-kembali:hover {
+    background-color: #e0a800;
+  }
+
+  .status-lunas {
+  background-color: green;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.status-belum {
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  margin: 15% auto;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  font-family: 'Inter', sans-serif;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-ya, .btn-tidak {
+  padding: 10px 20px;
+  font-size: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.btn-ya {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-tidak {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-ya:hover {
+  background-color: #45a049;
+}
+
+.btn-tidak:hover {
+  background-color: #c0392b;
+}
+
+.btn-green.active {
+  background-color: #006400; /* hijau gelap */
+  color: white;
+}
+
+.btn-red.active {
+  background-color: #8B0000; /* merah gelap */
+  color: white;
+}
+
+.btn-default.active {
+  background-color: #555;
+  color: white;
+}
+
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 6px 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.bton-ok {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bton-cancel {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
