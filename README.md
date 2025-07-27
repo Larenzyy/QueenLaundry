@@ -1,5 +1,5 @@
 
-## 🧺 Website Kair Queen Laundry
+## 🧺 Website Kasir Queen Laundry
 
 Tugas Proyek Mata Kuliah APS, Pemrograman Web, dan Rekayasa Perangkat Lunak
 
